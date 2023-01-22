@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    background: #1F2937;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+}
+.head2{
+    color: #4ADF86;
+}
+
+h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #D5D4D8;
+}
+
+button{
+    width: 191px;
+    height: 42px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #10B981;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+.passBoxs{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pass{
+    background: #273549;
+    border-radius: 6px;
+    width: 211px;
+    height: 39px;
+}
+
+#firstPassword, #secondPassword{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #55F991;
+    width: 180px;
+    height: 32px;
+}
