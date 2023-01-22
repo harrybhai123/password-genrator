@@ -92,8 +92,6 @@ const characters = [
   "/",
 ];
 
-let randomString = "";
-
 document.getElementById("myButton").addEventListener("click", function () {
   let randomStringOne = "";
   let randomStringTwo = "";
