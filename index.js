@@ -95,6 +95,8 @@ const characters = [
 document.getElementById("myButton").addEventListener("click", function () {
   let randomStringOne = "",
     randomStringTwo = "";
+  let firstId = document.getElementById("firstPassword");
+  let secondId = document.getElementById("secondPassword");
   for (let i = 0; i < 15; i++) {
     let randomPassOne = Math.floor(Math.random() * characters.length);
     let randomPassTwo = Math.floor(Math.random() * characters.length);
@@ -102,6 +104,6 @@ document.getElementById("myButton").addEventListener("click", function () {
     randomStringTwo += characters[randomPassTwo];
   }
 
-  document.getElementById("firstPassword").textContent = randomStringOne;
-  document.getElementById("secondPassword").textContent = randomStringTwo;
+  firstId.textContent = randomStringOne;
+  secondId.textContent = randomStringTwo;
 });
