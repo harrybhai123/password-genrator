@@ -94,8 +94,8 @@ const characters = [
 
 document.getElementById("myButton").addEventListener("click", function () {
   let randomStringOne = "",
-    randomStringTwo = "";
-  let firstId = document.getElementById("firstPassword"),
+    randomStringTwo = "",
+    firstId = document.getElementById("firstPassword"),
     secondId = document.getElementById("secondPassword");
   for (let i = 0; i < 15; i++) {
     let randomPassOne = Math.floor(Math.random() * characters.length);
