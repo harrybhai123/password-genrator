@@ -93,8 +93,8 @@ const characters = [
 ];
 
 document.getElementById("myButton").addEventListener("click", function () {
-  let randomStringOne = "";
-  let randomStringTwo = "";
+  let randomStringOne = "",
+    randomStringTwo = "";
   for (let i = 0; i < 15; i++) {
     let randomPassOne = Math.floor(Math.random() * characters.length);
     let randomPassTwo = Math.floor(Math.random() * characters.length);
