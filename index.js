@@ -1,109 +1,25 @@
-const characters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "~",
-  "`",
-  "!",
-  "@",
-  "#",
-  "$",
-  "%",
-  "^",
-  "&",
-  "*",
-  "(",
-  ")",
-  "_",
-  "-",
-  "+",
-  "=",
-  "{",
-  "[",
-  "}",
-  "]",
-  ",",
-  "|",
-  ":",
-  ";",
-  "<",
-  ">",
-  ".",
-  "?",
-  "/",
-];
+let emailCollector = document.getElementById("email-collector");
 
-document.getElementById("myButton").addEventListener("click", function () {
-  let randomStringOne = "",
-    randomStringTwo = "",
-    firstId = document.getElementById("firstPassword"),
-    secondId = document.getElementById("secondPassword");
-  for (let i = 0; i < 15; i++) {
-    let randomPassOne = Math.floor(Math.random() * characters.length);
-    let randomPassTwo = Math.floor(Math.random() * characters.length);
-    randomStringOne += characters[randomPassOne];
-    randomStringTwo += characters[randomPassTwo];
-  }
+emailCollector.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let ourFormData = new FormData(event.target);
 
-  firstId.textContent = randomStringOne;
-  secondId.textContent = randomStringTwo;
+  let userName = ourFormData.get("userName");
+  let userEmail = ourFormData.get("userEmail");
+
+  let upadateHtml = `
+    <h2>Congratulations, ${userName}</h2>
+
+    <p>You're on your way to becoming a BBQ Mater!</p>
+
+    <p class="fine-print">You will get weekly BBQ tips sent to: ${userEmail}</p>
+    `;
+
+  let mainContent = document.getElementById("main-content");
+
+    mainContent.innerHTML = upadateHtml;
+    
+    console.log('mainContent.innerHTML = upadateHtml;:', mainContent.innerHTML = upadateHtml)
+  
+  console.log('upadateHtml:', upadateHtml)
 });
